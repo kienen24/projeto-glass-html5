@@ -42,44 +42,53 @@
     			<h3 class="direita">Atualizado em 11/05/2020</h3>
     		</hgroup>
     	</header>
-<form method="POST" id="fcontato" action="meilto:andrekienen@gmailcom">
-    <fieldset id="usuario">
-    <legend>Identificação do Usuário</legend>
-    <p><label for="cnome"> Nome:</label> <input type="text" name= "tnome" id="cnome" size="20" maxlength="30" placeholder="Nome Completo"></p>
-    <p><label for="csenha"></label>Senha:</label> <input type="password" name="tSenha" id="csenha" size="8" maxlength="8" placeholder="Senha"></p>
-    <p><label for="cmail">E-mail:</label> <input type="email" name="tmail" id="cmail" size="20" maxlength="40" placeholder="e-mail"></p>
-    <fieldset id="sexo">
-        <legend>Sexo</legend>
-        <input type="radio" name="tsexo" id="cmasc"> <label for="cmasc">Masculino</label> <br/>
-        <input type="radio" name="tsexo" id="cfem"> <label for="cfem">Feminino</label>
+<form>
+
+    <fieldset id="usuario"><legend>Identificação do Usuário</legend>
+    <p><label for="cnome"> Nome:</label>
+    <input type="text" name= "tnome" id="cnome" size="20" maxlength="30" placeholder="Nome Completo"/></p>
+    <p><label for="csenha"></label>Senha:</label><input type="password" name="tSenha" id="csenha" size="8" maxlength="8" placeholder="8 digitos"/></p>
+    <p><label for="cmail">E-mail:</label><input type="email" name="tmail" id="cmail" size="20" maxlength="40"/></p>
+    <fieldset id="sexo"><legend>Sexo</legend>
+        <input type="radio" name="tsexo" id="cmasc"> <checked/> <label for="cmasc">Masculino</label><br/>
+        <input type="radio" name="tsexo" id="cfem"/><label for="cfem">Feminino</label>
      </fieldset>
-    <p><label for="cnasc"> Data de Nascimento:</label><input type="date" name="tnasc" id="cnasc"> </p>
+    <p><label for="cnasc"> Data de Nascimento:</label><input type="date" name="tnasc" id="cnasc"/> </p>
 </fieldset>
-<fieldset id="endereco">
-    <legend>Endereço do Usuário</legend>
-    <p><label for="crua"></label>Logradouro:</label> <input type="text" name="trua" id="crua" size="13" maxlength="80" placeholder="rua, avenida,trav.."> </p>
-    <p><label for="cnum">Número:</label><input type="number" name="tnum" id="cnum" min="0" max="99999" placeholder="Numero"> </p>
-    <p><label for="cest"> Estado:</label><section name="test" id="cest">
-        <optgroup label="Região Sudeste"><option value="RJ"> Rio de Janeiro</option>
+<fieldset id="endereco"><legend>Endereço do Usuário</legend>
+    <p><label for="crua"></label>Logradouro:</label> <input type="text" name="trua" id="crua" size="13" maxlength="80" placeholder="rua, avenida,trav.."/> </p>
+    <p><label for="cnum">Número:</label><input type="number" name="tnum" id="cnum" min="0" max="99999"/> </p>
+    <p><label for="cest"> Estado:</label><select name="test" id="cest">
+        <optgroup label="Região Sudeste">
+        <option value="RJ"> Rio de Janeiro</option>
         <option value="SP" >São Paulo</option>
         <option value="SC">Minas Gerais</option>
     </optgroup>
-       <optgroup label="Região Sul"> <option value="PR"> Paraná</option>
+    <optgroup>
+       <optgroup label="Região Sul">
+        <option value="PR"> Paraná</option>
         <option value="MG" selected>Santa Catarina</option>
-        <option value="RS">Rio Grande do Sul</option>
+        <option value="RS">Rio Grande do Sul</option></optgroup>
     </optgroup>
 
-    </section></p>
-    <p><label for="ccid"> Cidade:</label></p>
+       </select></p>
+    <p><label for="ccid"> Cidade:</label>
+    <input type="text" name="tcid" id="ccid"maxlength="40" placeholder="sua cidade" list="cidades"></p>
+    <datalist id="cidades">
+        <option value="rio de janeiro"></option>
+        <option value="nova iguaçu"></option>
+        <option value="niteroi"></option>
+        <option value="belford roxo"></option>
+    </datalist>
 </fieldset>
+
 <fieldset id="mensagem"> 
     <legend>Mensagem do Usuário</legend>
     <p><label for="curg"> Grau de Urgência:</label></p>
     <p><label for="cmsg">Mensagem:</label></p>
 </fieldset>
 
-<fieldset id="pedido"> 
-    <legend>Quero um Google Glass</legend>
+<fieldset id="pedido"> <legend>Quero um Google Glass</legend>
     <p><label for="cped">Gostaria de adquirir um Google Glass quando disponível</label></p>
     <p><label for="ccor">Cor:</label></p>
     <p><label for="cqtd">Quantidade:</label></p>
